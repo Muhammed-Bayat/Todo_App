@@ -1,0 +1,60 @@
+:root {
+  color: #20232a;
+  background: #f4f2ec;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select, textarea { font: inherit; }
+button, select, input, textarea { border-radius: 4px; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #e4a72c; outline-offset: 2px; }
+
+main { max-width: 980px; margin: 0 auto; padding: 48px 24px 72px; }
+.masthead { border-bottom: 3px solid #20232a; margin-bottom: 28px; padding-bottom: 22px; }
+.eyebrow { color: #8b3e21; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; margin: 0 0 8px; text-transform: uppercase; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-family: Georgia, serif; font-size: clamp(2.8rem, 8vw, 5rem); line-height: 0.9; margin-bottom: 16px; }
+h2 { font-family: Georgia, serif; font-size: 1.7rem; margin-bottom: 20px; }
+h3 { font-family: Georgia, serif; font-size: 1.25rem; margin: 0; }
+.intro { color: #5a5e67; margin-bottom: 0; }
+.task-form, .task-list { background: #fffdf8; border: 1px solid #d7d0c3; box-shadow: 5px 5px 0 #ddd5c7; padding: 24px; }
+.task-list { margin-top: 32px; }
+form, label { display: grid; gap: 7px; }
+label { color: #3d4149; font-size: 0.9rem; font-weight: 700; }
+input, select, textarea { background: #fff; border: 1px solid #9b978d; color: #20232a; padding: 10px; width: 100%; }
+textarea { resize: vertical; }
+.form-row { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); margin-top: 16px; }
+.actions { display: flex; gap: 10px; margin-top: 20px; }
+button { background: #1d5860; border: 1px solid #1d5860; color: white; cursor: pointer; font-weight: 700; padding: 10px 14px; }
+button:hover { background: #123f45; }
+button.secondary { background: #fffdf8; border-color: #64605a; color: #25282c; }
+button.secondary:hover { background: #eee9df; }
+button.archive { background: #8b3e21; border-color: #8b3e21; }
+button.archive:hover { background: #672b15; }
+.list-heading { align-items: flex-end; display: flex; gap: 24px; justify-content: space-between; margin-bottom: 20px; }
+.list-heading h2 { margin-bottom: 0; }
+.controls { align-items: flex-end; display: flex; gap: 10px; }
+.controls label { min-width: 135px; }
+.message { background: #e6f0e9; border-left: 4px solid #1d5860; padding: 10px 12px; }
+.empty { color: #5a5e67; padding: 20px 0 4px; }
+.tasks { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; }
+.task { align-items: flex-start; border: 1px solid #d7d0c3; display: flex; gap: 20px; justify-content: space-between; padding: 18px; }
+.task-main { min-width: 0; }
+.task-main > p { color: #4e535d; line-height: 1.45; margin: 10px 0 16px; white-space: pre-wrap; }
+.task-title-row { align-items: center; display: flex; flex-wrap: wrap; gap: 10px; }
+.overdue { background: #8b3e21; color: white; font-size: 0.78rem; font-weight: 700; padding: 4px 7px; text-transform: uppercase; }
+dl { display: flex; flex-wrap: wrap; gap: 16px; margin: 0; }
+dt { color: #666158; font-size: 0.73rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+dd { margin: 2px 0 0; }
+.task-actions { display: flex; flex-shrink: 0; gap: 8px; }
+
+@media (max-width: 680px) {
+  main { padding: 28px 16px 48px; }
+  .task-form, .task-list { padding: 18px; }
+  .form-row { grid-template-columns: 1fr; }
+  .list-heading, .controls, .task { align-items: stretch; flex-direction: column; }
+  .controls label { min-width: 0; }
+  .task-actions { width: 100%; }
+  .task-actions button { flex: 1; }
+}
